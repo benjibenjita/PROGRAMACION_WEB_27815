@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario con CSS Externo</title>
+    <link rel="stylesheet" href="../public/css/estilos.css">
+</head>
+<body>
+    <h1>Formulario de Registro</h1>
+    
+    <form>
+        <label for="usuario">Usuario:</label><br>
+        <input type="text" id="usuario" class="campo-texto"><br>
+        
+        <label for="comentario">Comentario:</label><br>
+        <textarea id="comentario" class="area-texto"></textarea><br>
+        
+        <label for="pais">País:</label><br>
+        <select id="pais" class="selector">
+            <option value="">Selecciona país</option>
+            <option value="mx">México</option>
+            <option value="ar">Argentina</option>
+            <option value="co">Colombia</option>
+        </select><br>
+        
+        <fieldset class="grupo-radio">
+            <legend>Género:</legend>
+            <input type="radio" id="masculino" name="genero" value="masculino" class="radio-input">
+            <label for="masculino">Masculino</label><br>
+            
+            <input type="radio" id="femenino" name="genero" value="femenino" class="radio-input">
+            <label for="femenino">Femenino</label><br>
+            
+            <input type="radio" id="otro" name="genero" value="otro" class="radio-input">
+            <label for="otro">Otro</label>
+        </fieldset>
+        
+        <input type="checkbox" id="newsletter" name="newsletter" value="suscrito" class="checkbox-input">
+        <label for="newsletter">Suscribirse al newsletter</label><br><br>
+        
+        <button type="submit" class="boton-enviar">Registrarse</button>
+    </form>
+</body>
+</html>

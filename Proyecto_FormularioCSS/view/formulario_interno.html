@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario con CSS Interno</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: moccasin;
+            margin: 20px;
+            padding: 0;
+        }
+        
+        h1 {
+            color: violet;
+            font-size: 24px;
+        }
+        
+        .campo-texto {
+            width: 250px;
+            padding: 8px;
+            border: 3px solid lightgreen;
+            background-color: peachpuff;
+            font-size: 14px;
+            margin-bottom: 15px;
+        }
+        
+        .area-texto {
+            width: 250px;
+            height: 80px;
+            padding: 8px;
+            border: 3px solid mediumaquamarine;
+            background-color: beige;
+            font-size: 14px;
+            margin-bottom: 15px;
+        }
+        
+        .selector {
+            width: 270px;
+            padding: 8px;
+            border: 3px solid purple;
+            background-color: beige;
+            font-size: 14px;
+            margin-bottom: 15px;
+        }
+        
+        .grupo-radio {
+            background-color: beige;
+            padding: 10px;
+            margin-bottom: 15px;
+            width: 200px;
+        }
+        
+        .radio-input {
+            margin-right: 5px;
+            accent-color: orange;
+        }
+        
+        .checkbox-input {
+            margin-right: 5px;
+            accent-color: rgb(255, 0, 170);
+            transform: scale(1.2);
+        }
+        
+        label {
+            font-weight: bold;
+            color: gray;
+        }
+        
+        .boton-enviar {
+            background-color: orange;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Formulario </h1>
+    
+    <form>
+        <label for="nombre">Nombre:</label><br>
+        <input type="text" id="nombre" class="campo-texto"><br>
+        
+        <label for="mensaje">Mensaje:</label><br>
+        <textarea id="mensaje" class="area-texto"></textarea><br>
+        
+        <label for="fruta">Fruta favorita:</label><br>
+        <select id="fruta" class="selector">
+            <option value="">Elige una fruta</option>
+            <option value="naranja">Naranja</option>
+            <option value="uva">Uva</option>
+            <option value="pera">Pera</option>
+        </select><br>
+        
+        <fieldset class="grupo-radio">
+            <legend>Color favorito:</legend>
+            <input type="radio" id="amarillo" name="color" value="amarillo" class="radio-input">
+            <label for="amarillo">Amarillo</label><br>
+            
+            <input type="radio" id="negro" name="color" value="negro" class="radio-input">
+            <label for="negro">Negro</label><br>
+            
+            <input type="radio" id="rojo" name="color" value="rojo" class="radio-input">
+            <label for="rojo">Rojo</label>
+        </fieldset>
+        
+        <input type="checkbox" id="terminos" name="terminos" value="acepto" class="checkbox-input">
+        <label for="terminos">Acepto los términos</label><br><br>
+        
+        <button type="submit" class="boton-enviar">Enviar</button>
+    </form>
+</body>
+</html>
